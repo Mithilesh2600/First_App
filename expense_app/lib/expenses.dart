@@ -1,5 +1,6 @@
+import 'package:expense_app/widgets/expense_list.dart';
 import 'package:flutter/material.dart';
-import 'expense.dart';
+import 'package:expense_app/models/expense.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -12,26 +13,25 @@ class Expenses extends StatefulWidget {
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _registeredExpenses = [
     Expense(
-        title: "Flutter Course",
-        amount: 25.99,
-        date: DateTime.now(),
-        category: Category.food),
+      title: 'Flutter Course',
+      amount: 25.99,
+      date: DateTime.now(),
+      category: Category.work,
+    ),
     Expense(
-        title: "Movie",
-        amount: 15.19,
-        date: DateTime.now(),
-        category: Category.leisure)
+      title: 'Movie',
+      amount: 15.19,
+      date: DateTime.now(),
+      category: Category.leisure,
+    )
   ];
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
-          Text("Chart"),
-          SizedBox(
-            height: 30,
-          ),
-          Text("Expenses List")
+          const Text("The Chart"),
+          Expanded(child: ExpenseList(expenses: _registeredExpenses))
         ],
       ),
     );
