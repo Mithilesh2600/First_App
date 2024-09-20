@@ -1,3 +1,4 @@
+import 'package:expense_app/new_expense.dart';
 import 'package:expense_app/widgets/expense_list.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_app/models/expense.dart';
@@ -29,7 +30,7 @@ class _ExpensesState extends State<Expenses> {
   void _openDialogOverlay() {
     showModalBottomSheet(
       context: context,
-      builder: (ctx) => const Text("This is a Modal Bottom Sheet"),
+      builder: (ctx) => const NewExpense(),
     );
   }
 
