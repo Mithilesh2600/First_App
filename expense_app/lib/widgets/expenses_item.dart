@@ -15,7 +15,6 @@ class ExpensesItem extends StatelessWidget {
           Text(expense.title),
           const SizedBox(
             height: 4,
-            child: Text("kj nksjn"),
           ),
           Row(
             children: [
@@ -23,11 +22,11 @@ class ExpensesItem extends StatelessWidget {
               const Spacer(),
               Row(
                 children: [
-                  const Icon(Icons.alarm),
+                  Icon(categoryIcons[expense.category]),
                   const SizedBox(
                     width: 8,
                   ),
-                  Text(expense.date.toString())
+                  Text(expense.formattedDate),
                 ],
               )
             ],

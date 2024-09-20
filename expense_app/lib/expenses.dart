@@ -25,9 +25,26 @@ class _ExpensesState extends State<Expenses> {
       category: Category.leisure,
     )
   ];
+
+  void _openDialogOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => const Text("This is a Modal Bottom Sheet"),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Expense Tracker"),
+        actions: [
+          IconButton(
+            onPressed: _openDialogOverlay,
+            icon: const Icon(Icons.add),
+          )
+        ],
+      ),
       body: Column(
         children: [
           const Text("The Chart"),
