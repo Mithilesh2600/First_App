@@ -11,18 +11,12 @@ class NewExpense extends StatefulWidget {
 
 class _NewExpenseState extends State<NewExpense> {
   final _titleController = TextEditingController();
-<<<<<<< Updated upstream
   final _amountController = TextEditingController();
-=======
->>>>>>> Stashed changes
 
   @override
   void dispose() {
     _titleController.dispose();
-<<<<<<< Updated upstream
     _amountController.dispose();
-=======
->>>>>>> Stashed changes
     super.dispose();
   }
 
@@ -58,10 +52,7 @@ class _NewExpenseState extends State<NewExpense> {
               ElevatedButton(
                   onPressed: () {
                     print(_titleController.text);
-<<<<<<< Updated upstream
                     print(_amountController.text);
-=======
->>>>>>> Stashed changes
                   },
                   child: const Text("Save Expense!")),
             ],
