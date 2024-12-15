@@ -1,3 +1,4 @@
+// import 'package:expense_app/main.dart';
 import 'package:expense_app/models/expense.dart';
 import 'package:flutter/material.dart';
 
@@ -11,8 +12,12 @@ class ExpensesItem extends StatelessWidget {
     return Card(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-        child: Column(children: [
-          Text(expense.title),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(
+            expense.title,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+            // style: Theme.of(context).textTheme.titleLarge,
+          ),
           const SizedBox(
             height: 4,
           ),
