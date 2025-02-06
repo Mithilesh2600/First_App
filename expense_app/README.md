@@ -1,6 +1,6 @@
 # expense_app
 
-A new Flutter project.
+A Flutter project which manages expenses of a user by differntiating the expenses in various categories and creates a bar graph which helps the user to recognize his expenditure and consider saving in certain expenses if needed.
 
 ## Getting Started
 
